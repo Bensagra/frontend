@@ -24,9 +24,9 @@
   "scripts": {
     "build:digitalocean": "npm install --production=false --force && npm run build && npm ci",
     "start": "npx serve -s build -l 80",
-    "start:dev": "craco start",
-    "dev:remote": "cross-env REACT_APP_DEV_REMOTE=remote npm start",
-    "build": "npx react-scripts build",
+    "start:dev": "npx craco start",
+    "dev:remote": "npx cross-env REACT_APP_DEV_REMOTE=remote npm start",
+    "build": "npx craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
