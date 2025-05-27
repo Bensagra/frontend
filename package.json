@@ -22,14 +22,26 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "build:digitalocean": "npm install --production=false --force && npm run build && npm ci",
     "start": "npx serve -s build -l 80",
-    "start:dev": "npx craco start",
-    "dev:remote": "npx cross-env REACT_APP_DEV_REMOTE=remote npm start",
-    "build": "npx craco build",
-    "vercel-build": "npm install --legacy-peer-deps && npm run build",
+    "start:dev": "craco start",
+    "dev:remote": "cross-env REACT_APP_DEV_REMOTE=remote npm start",
+    "build": "craco build",
+    "vercel-build": "npm run build",
     "test": "craco test",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "@craco/craco": "^6.1.2",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
+    "craco-alias": "^3.0.1",
+    "craco-less": "^1.17.1",
+    "cross-env": "^7.0.3",
+    "react-reconciler": "^0.26.2",
+    "react-refresh": "0.9.0"
+  },
+  "engines": {
+    "node": "18.x",
+    "npm": "7.x"
   },
   "browserslist": {
     "production": [
@@ -42,18 +54,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-"devDependencies": {
-  "@craco/craco": "^6.1.2",
-  "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
-  "craco-alias": "^3.0.1",
-  "craco-less": "^1.17.1",
-  "cross-env": "^7.0.3",
-  "react-reconciler": "^0.26.2",
-  "react-refresh": "0.9.0"
-},
-  "engines": {
-    "node": "18.x",
-    "npm": "7.x"
   }
 }
