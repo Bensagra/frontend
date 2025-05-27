@@ -27,6 +27,7 @@
     "start:dev": "npx craco start",
     "dev:remote": "npx cross-env REACT_APP_DEV_REMOTE=remote npm start",
     "build": "npx craco build",
+    "vercel-build": "npm install --legacy-peer-deps && npm run build",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
