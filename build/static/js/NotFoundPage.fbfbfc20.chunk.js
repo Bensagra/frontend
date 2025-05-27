@@ -1,2 +1,0 @@
-(this["webpackJsonpscraping-penguins-frontend-template"]=this["webpackJsonpscraping-penguins-frontend-template"]||[]).push([[10],{603:function(e,t,s){"use strict";s.r(t);var n=s(0),a=s(244),r=s(239),i=s(95),c=s(7);t.default=()=>(Object(n.useEffect)((()=>{i.a.replace("/notfound")}),[]),Object(c.jsx)(c.Fragment,{children:Object(c.jsx)(a.a,{status:"404",title:"404",subTitle:"Sorry, the page you visited does not exist.",extra:Object(c.jsx)(r.a,{href:"/",type:"primary",children:"Back Home"})})}))}}]);
-//# sourceMappingURL=NotFoundPage.fbfbfc20.chunk.js.map
