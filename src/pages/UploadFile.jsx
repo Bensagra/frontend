@@ -90,32 +90,31 @@ const Uploadfile = () => {
 
 
 
-    const handleFileUpload = async (file) => {
-        setIsLoading(true);
+  const handleFileUpload = async (file) => {
+    setIsLoading(true);
 
-        try {
-            // Create FormData and append the file
-            const formData = new FormData();
-            formData.append('file', file);
+    try {
+        const formData = new FormData();
+        formData.append('file', file);
 
-            // Perform API call with FormData
-            const response = await fetch(`${API_BASE_URL}uploadFile`, {
-                method: 'POST',
-                body: formData
-            });
+        const response = await fetch(`${API_BASE_URL}uploadFile`, {
+            method: 'POST',
+            body: formData
+        });
 
-            if (response.ok) {
-                const result = await response.json();
-                // Handle the response from the server if needed
-                setDocumentId(result?.result._id)
-                setUploadedFile(result.fileContent)
-            } else {
-                console.error('Error uploading file:', response.statusText);
-            }
-        } catch (error) {
-            console.error('Error:', error.message);
+        if (response.ok) {
+            const result = await response.json();
+            setDocumentId(result?.result._id); // Esto activa el useEffect de polling
+            // 🚫 NO hagas setUploadedFile acá
+        } else {
+            console.error('Error uploading file:', response.statusText);
+            setIsLoading(false); // En caso de error, frená el loading
         }
-    };
+    } catch (error) {
+        console.error('Error:', error.message);
+        setIsLoading(false);
+    }
+};
 
     const handleDownload = (uploadedFile) => {
         if (uploadedFile) {
