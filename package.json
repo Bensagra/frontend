@@ -26,7 +26,7 @@
     "start": "npx serve -s build -l 80",
     "start:dev": "craco start",
     "dev:remote": "cross-env REACT_APP_DEV_REMOTE=remote npm start",
-    "build": "craco build",
+    "build": "npx react-scripts build",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
