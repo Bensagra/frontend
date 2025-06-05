@@ -6,8 +6,8 @@ console.log(
 export const BACKEND_BASE_URL = 
 process.env.NODE_ENV == "production" ||
 process.env.REACT_APP_DEV_REMOTE == "remote"
-  ? "https://backend-mu-seven-57.vercel.app/"
-  : "https://backend-mu-seven-57.vercel.app/"
+  ? "https://lionfish-app-3jag5.ondigitalocean.app/"
+  : "https://lionfish-app-3jag5.ondigitalocean.app/"
 
 export const API_BASE_URL = BACKEND_BASE_URL + "api/";
  
